@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #0a0a0a;
+  --color-brand-gold: #D4AF37; /* Color de tu logo */
+  --color-brand-gray: #f5f5f5;
+}
+
+/* Estilos Globales */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-white text-brand-black;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Animación de entrada estilo Marval */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efecto Minimalista para los inputs */
+input, select, textarea {
+  @apply border-b border-gray-300 focus:border-brand-gold outline-none transition-colors py-2 bg-transparent;
+}
+
+/* Botón Premium */
+.btn-premium {
+  @apply relative overflow-hidden border border-brand-black px-8 py-3 transition-all duration-500 hover:text-white;
+}
+
+.btn-premium::before {
+  content: '';
+  @apply absolute top-0 left-0 w-0 h-full bg-brand-black transition-all duration-500 -z-10;
+}
+
+.btn-premium:hover::before {
+  @apply w-full;
+}
+/* --- Estilos del Modal --- */
+[x-cloak] { display: none !important; }
+
+.modal-overlay {
+  @apply fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-center justify-center p-4;
+}
+
+.modal-content {
+  @apply bg-white max-w-2xl w-full p-8 md:p-12 relative shadow-2xl overflow-y-auto max-h-[90vh];
+}
+
+/* --- Botón WhatsApp --- */
+.whatsapp-float {
+  @apply fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center;
+}
+
+/* --- Secciones --- */
+.section-dark {
+  @apply bg-brand-black text-white py-24;
+}
+
+.input-premium {
+  @apply w-full border-b border-gray-300 focus:border-brand-gold outline-none transition-all py-3 bg-transparent font-light;
+}
+
+/* Efecto de imagen Marval: Blanco y negro a Color */
+.img-reveal {
+  @apply grayscale transition-all duration-1000 ease-in-out cursor-pointer;
+}
+
+.img-reveal:hover {
+  @apply grayscale-0 scale-[1.02];
+}
+
+/* Decoración detrás de la imagen */
+.hero-accent {
+  @apply absolute -top-10 -right-10 w-64 h-64 bg-gray-100 -z-10;
+}
+
+/* Estado inicial: invisible y un poco más abajo */
+.reveal-on-scroll {
+  @apply opacity-0 translate-y-10 transition-all duration-1000 ease-out;
+}
+
+/* Estado activo: visible y en su posición original */
+.reveal-on-scroll.is-visible {
+  @apply opacity-100 translate-y-0;
+}
+
+/* Variación para que unos aparezcan más lento que otros */
+.delay-200 { transition-delay: 200ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* Estilos para el carrusel */
+.testimonial-card {
+    @apply bg-white p-8 md:p-12 border border-gray-100 shadow-sm transition-all duration-500;
+}
+
+.dot-active {
+    @apply bg-brand-gold w-8;
+}
+
+.dot-inactive {
+    @apply bg-gray-200 w-2;
+}

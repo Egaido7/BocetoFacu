@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es" x-data="{ scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defensa derecho laboral | Facundo Liceda & Asoc.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
+     <link rel="icon" href="src/icono.png" type="image/png" style="width: 15em;">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="antialiased bg-white">
+
+    <nav :class="scrolled ? 'bg-white/80 backdrop-blur-md py-3 shadow-sm' : 'bg-transparent py-6'" 
+         class="fixed w-full z-50 transition-all duration-500">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="font-serif font-bold text-xl tracking-tighter uppercase text-brand-black">
+                    Facundo Liceda <span class="text-brand-gold">&</span> Asoc.
+                </span>
+            </div>
+            <div class="text-[11px] font-semibold uppercase tracking-[0.2em]">
+                <a href="../index.html" class="hover:text-brand-gold">← Volver al Inicio</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-48 pb-24 bg-gray-50 overflow-hidden">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal-on-scroll is-visible">
+                <span class="text-brand-gold text-xs tracking-[0.4em] uppercase font-bold mb-4 block">Especialidad</span>
+                <h1 class="font-serif text-5xl md:text-7xl mb-8 leading-tight">Que no te paguen <br><span class="italic font-normal text-brand-gold">lo que corresponde.</span>es una injusticia</h1>
+                <p class="text-gray-500 text-lg font-light leading-relaxed">
+                    Enfrentarse a un empleador o una ART es una situación desigual. La ley te protege, no renuncies a tus derechos por falta de asesoramiento
+                </p>
+            </div>
+            <div class="relative hidden md:block">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" class="grayscale shadow-2xl w-full h-[400px] object-cover" alt="Derecho Laboral">
+            </div>
+        </div>
+        <img src="../src/logoinicial.png" class="absolute -right-20 -bottom-20 w-1/3 opacity-[0.03] grayscale pointer-events-none">
+    </header>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20">
+                <div class="space-y-8">
+                    <h2 class="font-serif text-3xl">Especialistas en despidos, indemnizaciones y accidentes de trabajo.</h2>
+                    <p class="text-gray-500 font-light leading-relaxed">
+                        
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-sm"><span class="text-brand-gold text-xl">●</span> Cálculo de indemnización por despido arbitrario.</li>
+                        <li class="flex items-center gap-3 text-sm"><span class="text-brand-gold text-xl">●</span> Regularización de trabajo no registrado ("en negro").</li>
+                        <li class="flex items-center gap-3 text-sm"><span class="text-brand-gold text-xl">●</span> Reclamos ante ART por enfermedades profesionales..</li>
+                    </ul>
+                </div>
+                <div class="relative overflow-hidden bg-brand-black p-12 text-white shadow-2xl">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <img src="../src/logoinicial.png" alt="Logo Fondo" class="w-80 h-auto opacity-10 blur-[1px] grayscale">
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="font-serif text-2xl mb-6 italic">"El trabajador es la parte más débil de la relación laboral y merece la máxima protección legal."</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                        </p>
+                        <a href="#contacto" class="text-brand-gold text-xs font-bold tracking-widest uppercase border-b border-brand-gold pb-1">Consultar este caso →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-24">
+                <div>
+                    <h2 class="font-serif text-5xl mb-8 font-bold">Hablemos.</h2>
+                    <p class="text-gray-500 mb-12 font-light">Contanos tu situación sobre <strong>Defensa de derecho laboral</strong> y te asesoraremos a la brevedad.</p>
+                    <div class="text-sm space-y-2">
+                        <p>abogados.liceda.facundo@gmail.com</p>
+                        <p class="text-brand-gold">@ab_liceda.facundo</p>
+                    </div>
+                </div>
+                <form class="space-y-8">
+                    <input type="text" placeholder="Nombre completo*" class="input-premium" required>
+                    <input type="email" placeholder="Correo electrónico*" class="input-premium" required>
+                    <textarea placeholder="Detalles de tu caso..." rows="4" class="input-premium"></textarea>
+                    <button class="btn-premium w-full mt-4">ENVIAR CONSULTA</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-black py-12 text-center text-[10px] text-gray-600 tracking-[0.2em] uppercase">
+        © 2026 Facundo Liceda & Asoc. | Excelencia Jurídica en San Luis
+    </footer>
+
+</body>
+</html>
