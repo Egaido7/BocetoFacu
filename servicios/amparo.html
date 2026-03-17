@@ -25,21 +25,35 @@
         </div>
     </nav>
 
-    <header class="relative pt-48 pb-24 bg-gray-50 overflow-hidden">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="reveal-on-scroll is-visible">
-                <span class="text-brand-gold text-xs tracking-[0.4em] uppercase font-bold mb-4 block">Especialidad</span>
-                <h1 class="font-serif text-5xl md:text-7xl mb-8 leading-tight">¿Tu obra social te negó un tratamiento? <br><span class="italic font-normal text-brand-gold">La salud es un derecho.</span></h1>
-                <p class="text-gray-500 text-lg font-light leading-relaxed">
-                    Las prepagas y obras sociales tienen obligaciones. Cuando no cumplen, la ley te da herramientas rápidas para exigir la cobertura inmediata.
-                </p>
-            </div>
-            <div class="relative hidden md:block">
-                <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800" class="grayscale shadow-2xl w-full h-[400px] object-cover" alt="Amparo en Salud">
-            </div>
+    <header class="relative pt-48 pb-24 bg-gray-50 overflow-hidden min-h-[50vh] md:min-h-0 flex items-center">
+    <div class="absolute inset-0 md:hidden">
+        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200" 
+             class="w-full h-full object-cover grayscale opacity-20 blur-[4px]" alt="Fondo">
+    </div>
+
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
+        <div class="reveal-on-scroll is-visible">
+            <span class="text-brand-gold text-xs tracking-[0.4em] uppercase font-bold mb-4 block">Especialidad</span>
+            
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-7xl mb-8 leading-tight text-brand-black">
+                ¿Tu obra social te negó un tratamiento? <br>
+                <span class="italic font-normal text-brand-gold">La salud es un derecho.</span>
+            </h1>
+            
+            <p class="text-gray-600 md:text-gray-500 text-lg font-light leading-relaxed max-w-xl">
+                Las prepagas y obras sociales tienen obligaciones. Cuando no cumplen, la ley te da herramientas rápidas para exigir la cobertura inmediata.
+            </p>
         </div>
-        <img src="../src/logoinicial.png" class="absolute -right-20 -bottom-20 w-1/3 opacity-[0.03] grayscale pointer-events-none">
-    </header>
+
+        <div class="relative hidden md:block">
+            <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800" 
+                 class="grayscale shadow-2xl w-full h-[350px] lg:h-[450px] object-cover" 
+                 alt="Amparo en Salud">
+        </div>
+    </div>
+
+    <img src="../src/logoinicial.png" class="absolute -right-20 -bottom-20 w-1/3 opacity-[0.03] grayscale pointer-events-none">
+</header>
 
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
