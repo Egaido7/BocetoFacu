@@ -4,12 +4,9 @@
     scrolled: false,
     activeModal: null,
     services: [
-        { id: 1, slug: 'consumidor', title: 'Defensa del Consumidor', desc: 'Protección contra prácticas abusivas, incumplimientos y productos defectuosos.', longDesc: 'Nuestro equipo especializado garantiza que las empresas respeten tus derechos. Manejamos reclamos por garantías, cláusulas abusivas en contratos y daños por servicios públicos deficientes.' },
-        { id: 2, slug: 'transito', title: 'Accidentes de Tránsito', desc: 'Representación integral en lesiones y daños materiales.', longDesc: 'Gestionamos indemnizaciones justas frente a compañías de seguro. Nos encargamos de toda la etapa pericial y legal para que te preocuques en tu recuperación.' },
-        { id: 3, slug: 'amparo', title: 'Amparo en Salud', desc: 'Defensa urgente ante negativas de obras sociales.', longDesc: 'Cuando la salud no puede esperar, presentamos recursos de amparo para coberturas de medicamentos, cirugías o tratamientos de alta complejidad que han sido denegados.' },
-        { id: 4, slug: 'der-penal', title: 'Derecho Penal', desc: 'Defensa técnica y representación de víctimas.', longDesc: 'Asistencia en todas las etapas del proceso penal, garantizando el debido proceso y la defensa efectiva de tus intereses con absoluta confidencialidad.' },
-        { id: 5, slug: 'der-laboral', title: 'Derecho Laboral', desc: 'Especialistas en despidos e indemnizaciones.', longDesc: 'Protegemos al trabajador ante despidos arbitrarios, trabajo no registrado y accidentes laborales (ART), buscando siempre la máxima compensación legal.' },
-        { id: 6, slug: 'der-previsional', title: 'Derecho Previsional', desc: 'Gestión de jubilaciones y pensiones.', longDesc: 'Asesoramiento integral para la obtención de beneficios jubilatorios, reajustes de haberes y trámites ante ANSES de forma ágil.' }
+        { id: 1, slug: 'amparo', title: 'Amparo en Salud', desc: 'Defensa urgente ante negativas de obras sociales.', longDesc: 'Cuando la salud no puede esperar, presentamos recursos de amparo para coberturas de medicamentos, cirugías o tratamientos de alta complejidad que han sido denegados.' },
+        { id: 2, slug: 'der-penal', title: 'Derecho Penal', desc: 'Defensa técnica y representación de víctimas.', longDesc: 'Asistencia en todas las etapas del proceso penal, garantizando el debido proceso y la defensa efectiva de tus intereses con absoluta confidencialidad.' },
+        { id: 3, slug: 'der-laboral', title: 'Derecho Laboral', desc: 'Especialistas en despidos e indemnizaciones.', longDesc: 'Protegemos al trabajador ante despidos arbitrarios, trabajo no registrado y accidentes laborales (ART), buscando siempre la máxima compensación legal.' }
     ]
 }" @scroll.window="scrolled = (window.pageYOffset > 20)" :class="{ 'overflow-hidden': mobileMenu }">
 
@@ -93,7 +90,7 @@
                     </h1>
 
                     <p class="text-gray-500 text-lg md:text-xl mb-12 max-w-md font-light leading-relaxed">
-                        Brindamos soluciones integrales con un enfoque en la protección de los derechos y la justicia de nuestros clientes en <span class="text-brand-black font-semibold">San Luis,</span> <span class="text-brand-gold font-bold">Mendoza,</span> <span class="text-brand-black font-semibold">Neuquén</span> y <span class="text-brand-gold font-bold">Córdoba.</span>
+                        Brindamos soluciones integrales con un enfoque en la protección de los derechos y la justicia de nuestros clientes en <span class="text-brand-black font-semibold">San Luis,</span> <span class="text-brand-gold font-bold">Rio Negro,</span> <span class="text-brand-black font-semibold">Neuquén</span> y <span class="text-brand-gold font-bold">Córdoba.</span>
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-6">
@@ -169,7 +166,7 @@
                                 <span class="font-serif text-3xl text-brand-gold">04.</span>
                                 <div>
                                     <h4 class="font-bold uppercase tracking-widest text-xs mb-2">Resultados</h4>
-                                    <p class="text-gray-500 text-sm">Logramos la mejor resolución posible: compensaciones, sentencias favorables o acuerdos justos.</p>
+                                    <p class="text-gray-500 text-sm">Logramos la mejor solución posible: compensaciones, sentencias favorables o acuerdos justos.</p>
                                 </div>
                             </div>
                         </div>
@@ -190,86 +187,6 @@
             </div>
         </section>
 
-        <section class="py-32 bg-white overflow-hidden" x-data="{ 
-            activeTestimonial: 0,
-            testimonials: [
-                { 
-                    name: 'Carlos Rodríguez', 
-                    area: 'Defensa del Consumidor', 
-                    text: 'Excelente trato y profesionalismo. Tenía un problema con un plan de ahorro que parecía no tener solución, y Facundo logró que me entregaran la unidad en tiempo récord. Muy agradecido.',
-                    avatar: 'CR'
-                },
-                { 
-                    name: 'Lucía Mendoza', 
-                    area: 'Amparo en Salud', 
-                    text: 'Gracias al estudio logré que mi obra social cubriera la cirugía que necesitaba de urgencia. La rapidez con la que presentaron el amparo fue clave para mi recuperación. Sumamente profesionales.',
-                    avatar: 'LM'
-                },
-                { 
-                    name: 'Martín Gómez', 
-                    area: 'Accidentes de Tránsito', 
-                    text: 'Después de mi accidente, me sentía perdido con los trámites del seguro. El equipo se encargó de todo y logramos una indemnización justa. La transparencia en cada paso me dio mucha tranquilidad.',
-                    avatar: 'MG'
-                }
-            ]
-        }">
-            <div class="container mx-auto px-6">
-                <div class="mb-16 reveal-on-scroll">
-                    <span class="text-brand-gold text-xs tracking-[0.3em] uppercase block mb-4">Opiniones</span>
-                    <h2 class="font-serif text-4xl md:text-5xl text-brand-black">Casos de Éxito</h2>
-                </div>
-
-                <div class="relative reveal-on-scroll delay-200">
-                    <div class="relative min-h-[400px] md:min-h-[300px]">
-                        <template x-for="(testimonial, index) in testimonials" :key="index">
-                            <div x-show="activeTestimonial === index" 
-                                 x-transition:enter="transition ease-out duration-500"
-                                 x-transition:enter-start="opacity-0 translate-x-12"
-                                 x-transition:enter-end="opacity-100 translate-x-0"
-                                 class="testimonial-card">
-                                
-                                <div class="flex flex-col md:flex-row gap-8 items-start">
-                                    <div class="w-16 h-16 bg-gray-50 flex items-center justify-center border border-gray-100 flex-shrink-0">
-                                        <span class="font-serif text-brand-gold text-xl" x-text="testimonial.avatar"></span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="mb-6">
-                                            <svg class="w-8 h-8 text-brand-gold opacity-30 mb-4" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8v8H6v2a2 2 0 002 2h2v4H8a6 6 0 01-6-6v-8a2 2 0 012-2h4a2 2 0 012 2zm16 0v8h-4v2a2 2 0 002 2h2v4h-2a6 6 0 01-6-6v-8a2 2 0 012-2h4a2 2 0 012 2z"></path></svg>
-                                            <p class="text-gray-600 text-lg md:text-xl italic font-light leading-relaxed" x-text="testimonial.text"></p>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-bold text-brand-black uppercase tracking-widest text-xs" x-text="testimonial.name"></h4>
-                                            <p class="text-brand-gold text-[10px] uppercase tracking-widest mt-1" x-text="testimonial.area"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </template>
-                    </div>
-
-                    <div class="flex items-center gap-8 mt-12">
-                        <div class="flex gap-2">
-                            <template x-for="(t, i) in testimonials" :key="i">
-                                <button @click="activeTestimonial = i" 
-                                        :class="activeTestimonial === i ? 'dot-active' : 'dot-inactive'"
-                                        class="h-1 transition-all duration-300"></button>
-                            </template>
-                        </div>
-                        
-                        <div class="flex gap-4">
-                            <button @click="activeTestimonial = activeTestimonial === 0 ? testimonials.length - 1 : activeTestimonial - 1" 
-                                    class="p-2 hover:text-brand-gold transition-colors">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
-                            </button>
-                            <button @click="activeTestimonial = activeTestimonial === testimonials.length - 1 ? 0 : activeTestimonial + 1" 
-                                    class="p-2 hover:text-brand-gold transition-colors">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" d="M9 5l7 7-7 7"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section id="contacto" class="py-32 bg-white">
             <div class="container mx-auto px-6 max-w-5xl" >
@@ -278,7 +195,7 @@
                         <h2 class="font-serif text-5xl mb-8 font-bold">Hablemos</h2>
                         <p class="text-gray-500 mb-12 font-light">Complete el formulario y un especialista se pondrá en contacto en menos de 24 horas hábiles.</p>
                         <div class="space-y-6 text-sm">
-                            <p><strong>EMAIL:</strong> abogadoliceda.negocios@gmail.com</p>
+                            <p><strong>EMAIL:</strong> abogado.liceda.facundo@gmail.com</p>
                             <p><strong>INSTAGRAM:</strong> <a href="https://www.instagram.com/ab_liceda.facundo" target="_blank" class="text-brand-gold hover:underline">@ab_liceda.facundo</a></p>
                         </div>
                     </div>
@@ -288,11 +205,8 @@
                         <input type="tel" placeholder="Número de telefono*" class= "input-premium" required>
                         <select class="input-premium" required>
                             <option disabled selected>Selecciona una opción*</option>
-                            <option>Civil / Consumidor</option>
                             <option>Laboral</option>
                             <option>Penal</option>
-                            <option>Acc. de Transito</option>
-                            <option>Previsional</option>
                             <option>Amparo en Salud</option>
                             <option>Varios</option>
                         </select>
@@ -305,7 +219,7 @@
         </section>
 
         <footer class="bg-brand-black py-12 text-center text-[10px] text-gray-600 tracking-[0.2em] uppercase border-t border-gray-900">
-            © 2026 Facundo Liceda & Asoc. | Excelencia Jurídica en San Luis, Cordoba, Mendoza y Neuquén
+            © 2026 Facundo Liceda & Asoc. | Excelencia Jurídica en San Luis, Cordoba, Rio Negro y Neuquén
         </footer>
     </div>
 
