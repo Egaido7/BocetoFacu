@@ -199,21 +199,33 @@
                             <p><strong>INSTAGRAM:</strong> <a href="https://www.instagram.com/ab_liceda.facundo" target="_blank" class="text-brand-gold hover:underline">@ab_liceda.facundo</a></p>
                         </div>
                     </div>
-                    <form class="space-y-8 reveal-on-scroll delay-200">
-                        <input type="text" placeholder="Nombre completo*" pattern="[A-Za-z\s]+" class="input-premium" required>
-                        <input type="email" placeholder="Correo electrónico*" class="input-premium" required>
-                        <input type="tel" placeholder="Número de telefono*" class= "input-premium" required>
-                        <select class="input-premium" required>
-                            <option disabled selected>Selecciona una opción*</option>
-                            <option>Laboral</option>
-                            <option>Penal</option>
-                            <option>Amparo en Salud</option>
-                            <option>Varios</option>
-                        </select>
-                        <textarea placeholder="Breve descripción del caso" rows="4" class="input-premium"></textarea>
-                        <p class="text-[10px] text-gray-500">* Campos obligatorios</p>
-                        <button class="btn-premium w-full mt-4">ENVIAR CONSULTA</button>
-                    </form>
+                    <form action="https://formsubmit.co/abogado.liceda.facundo@gmail.com" method="POST" class="space-y-8 reveal-on-scroll delay-200">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_subject" value="¡Nueva consulta!">
+    <input type="hidden" name="_next" value="https://licedafacundo.com/servicios/consulta-enviada.html">
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="Nombre_Completo" placeholder="Nombre completo*" pattern="[A-Za-z\s]+" class="input-premium" required>
+    <input type="email" name="Email" placeholder="Correo electrónico*" class="input-premium" required>
+    <input type="tel" name="Telefono" placeholder="Número de telefono*" class="input-premium" required>
+    
+    <select name="Area_Consulta" class="input-premium text-gray-400 focus:text-brand-black" required>
+        <option value="" disabled selected>Selecciona una opción*</option>
+        <option value="Laboral" class="text-brand-black">Laboral</option>
+        <option value="Penal" class="text-brand-black">Penal</option>
+        <option value="Amparo en Salud" class="text-brand-black">Amparo en Salud</option>
+        <option value="Varios" class="text-brand-black">Varios</option>
+    </select>
+
+    <textarea name="Mensaje" placeholder="Breve descripción del caso" rows="4" class="input-premium"></textarea>
+    
+    <p class="text-[10px] text-gray-500">* Campos obligatorios</p>
+    
+    <button type="submit" class="btn-premium w-full mt-4 cursor-pointer font-semibold tracking-[0.2em] uppercase text-xs">
+        ENVIAR CONSULTA
+    </button>
+</form>
                 </div>
             </div>
         </section>
